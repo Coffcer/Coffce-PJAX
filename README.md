@@ -3,7 +3,7 @@ coffce-pjax
 coffce-pjax可以将页面所有的跳转替换为AJAX请求，把网站改造成单页面应用。<br>
 note: 由于浏览器限制，pjax需要在服务器环境下使用，即不要使用file://xxx.html运行。
 
-###有何用处：
+### 有何用处：
 * 可以在页面切换间平滑过渡，增加Loading动画。
 * 可以在各个页面间传递数据，不依赖URL。
 * 可以选择性的保留状态，如音乐网站，切换页面时不会停止播放歌曲。
@@ -12,14 +12,14 @@ note: 由于浏览器限制，pjax需要在服务器环境下使用，即不要�
 * 减少了请求体积，节省流量，加快页面响应速度。
 * 平滑降级到低版本浏览器上，对SEO也不会有影响。
 
-###兼容性：
+### 兼容性：
 * Chrome, Firefox, Safari, Android Browser, IE8+等。
 * 在IE8和IE9上使用URL Hash，即地址栏的#号。
 * 在更低版本的浏览器和搜索引擎蜘蛛上，保持默认跳转，不受影响。
 
 如何使用
 ---
-####安装：
+#### 安装：
     npm install coffce-pjax
 
 #### 引入
@@ -32,7 +32,7 @@ var pjax = window.CoffcePJAX
 // 使用commonJS或AMD
 var pjax = require("coffce-pjax");
 ```
-####简单配置：
+#### 简单配置：
 ``` javascript
 pjax.init({
     // 替换新页面内容的容器
@@ -41,7 +41,7 @@ pjax.init({
     hash: true
 });
 ```
-####完整配置:
+#### 完整配置:
 ``` javascript
 pjax.init({
     // 选择器，支持querySelector选择器
@@ -131,7 +131,7 @@ pjax.trigger(type, args);
 
 事件
 ---
-####监听事件
+#### 监听事件
 ```javascript
 // 通过接口监听
 pjax.on(type, url, function);
@@ -147,7 +147,7 @@ pjax.init({
 });
 ```
 
-####事件类型
+#### 事件类型
 **init**<br>
 在每个页面加载完成后触发，有一个object参数：{ title, html }
 
